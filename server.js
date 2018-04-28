@@ -9,6 +9,7 @@ const routes = require("./routes");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Serve up static assets
+console.log('change')
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
