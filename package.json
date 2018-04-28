@@ -1,0 +1,8 @@
+{
+  "name": "tunes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alphard23/tunes.git",
+  "author": "Anton Mykhaylov",
+  "license": "MIT"
+}
