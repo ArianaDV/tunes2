@@ -3,7 +3,7 @@ const dataController = require("../../controllers/spotifyController");
 
 router
   .route("/")
-  .get(dataController.findAll)
+  .get(dataController.fetchID)
 
   module.exports = router;
 
