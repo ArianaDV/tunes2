@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "tunes2",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Tunes Demo",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
