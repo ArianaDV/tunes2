@@ -1,23 +1,62 @@
-import React from "react";
-import { ListSong } from "../List";
+import React, { Component } from "react";
+import API from "../../utils/API";
 
-const Song = ({ title, _id, artist, handleClick }) => (
-  <ListSong>
-    <h3>
-      <em>{title}</em>{" "}
-      <span className="btn-group pull-right">
-        <a
-          className="btn btn-light"
-          artist={artist}
-        >
-        Songs
-        </a>
-        <button onClick={() => handleClick(_id)} className="btn btn-primary">
-          {}
-        </button>
-      </span>
-    </h3>
-  </ListSong>
-);
+
+class Song extends Component {
+
+  // constructor(props){
+  //   super(props);
+  //   console.log(this.props, "THESE ARE PROPS")
+  // }
+
+  state = {
+    songs: []
+  };
+
+  componentDidMount(){
+    console.log(this);
+    this.getSavedSongs();
+  }
+
+  getSavedSongs = () => {
+    API.getSavedSongs()
+        .then(res =>
+          this.setState({
+            songs: res.data
+        })
+    )
+    // .then(console.log(API.getSavedSongs()))
+    .catch(err => console.log(err));
+};
+
+  render(){
+    return(<div>
+      Test
+      <div className="panel">
+          {this.state.songs.length ? (
+            <div>
+                  {this.state.songs.map(song => (
+                      // console.log(song.title  
+                      
+                        <ul className="list">
+                          
+                          {/* key={song.title} */}
+                          Title: {song.title} 
+                        
+                          Artist: {song.artist}
+                          </ul>
+                      
+                  ))}
+              </div>
+          ): ''}
+      </div>
+      
+
+
+
+    </div>)
+  }
+
+}
 
 export default Song;

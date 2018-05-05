@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "tunes2",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Tunes Demo",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
@@ -19,12 +19,17 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "mongoose": "^5.0.15",
     "morgan": "^1.9.0",
     "node-spotify-api": "^1.0.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react-router-dom": "^4.2.2",
-    "request": "^2.85.0"
+    "request": "^2.85.0",
+    "socket.io": "^2.1.0"
   }
 }

@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install node-spotify-api
+  C:\Program Files\nodejs\node.exe C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add var bcrypt = require bcrypt-nodejs
 
 PATH: 
   C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MongoDB\Server\3.6\bin;C:\Users\Ariana\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Ariana\AppData\Local\Programs\Python\Python36-32\;C:\Users\Ariana\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Ariana\AppData\Local\Programs\Python\Python35\;C:\Users\Ariana\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\Ariana\AppData\Roaming\npm
@@ -15,9 +15,9 @@ Platform:
 
 npm manifest: 
   {
-    "name": "mern",
+    "name": "tunes2",
     "version": "1.0.0",
-    "description": "Mern Demo",
+    "description": "Tunes Demo",
     "main": "server.js",
     "scripts": {
       "server": "node server.js",
@@ -39,6 +39,9 @@ npm manifest:
       "express": "^4.16.3",
       "mongoose": "^5.0.15",
       "morgan": "^1.9.0",
+      "node-spotify-api": "^1.0.7",
+      "passport": "^0.4.0",
+      "passport-local": "^1.0.0",
       "react-router-dom": "^4.2.2",
       "request": "^2.85.0"
     }
@@ -213,6 +216,10 @@ Lockfile:
   bluebird@3.5.0:
     version "3.5.0"
     resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
+  
+  bluebird@^3.5.0:
+    version "3.5.1"
+    resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
   
   body-parser@1.18.2, body-parser@^1.18.2:
     version "1.18.2"
@@ -1159,6 +1166,10 @@ Lockfile:
     version "3.6.1"
     resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
   
+  lodash@^4.13.1:
+    version "4.17.10"
+    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+  
   lodash@^4.14.0:
     version "4.17.5"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
@@ -1350,6 +1361,13 @@ Lockfile:
       tar "^2.2.1"
       tar-pack "^3.4.0"
   
+  node-spotify-api@^1.0.7:
+    version "1.0.7"
+    resolved "https://registry.yarnpkg.com/node-spotify-api/-/node-spotify-api-1.0.7.tgz#09dd3088428fbf1d0ca4cdf6bbb2d1236bdaa934"
+    dependencies:
+      request "^2.81.0"
+      request-promise "^4.2.1"
+  
   nodemon@^1.11.0:
     version "1.11.0"
     resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.11.0.tgz#226c562bd2a7b13d3d7518b49ad4828a3623d06c"
@@ -1467,6 +1485,23 @@ Lockfile:
     version "1.3.2"
     resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
   
+  passport-local@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/passport-local/-/passport-local-1.0.0.tgz#1fe63268c92e75606626437e3b906662c15ba6ee"
+    dependencies:
+      passport-strategy "1.x.x"
+  
+  passport-strategy@1.x.x:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
+  
+  passport@^0.4.0:
+    version "0.4.0"
+    resolved "https://registry.yarnpkg.com/passport/-/passport-0.4.0.tgz#c5095691347bd5ad3b5e180238c3914d16f05811"
+    dependencies:
+      passport-strategy "1.x.x"
+      pause "0.0.1"
+  
   path-is-absolute@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
@@ -1486,6 +1521,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/pause-stream/-/pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445"
     dependencies:
       through "~2.3"
+  
+  pause@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   
   performance-now@^0.2.0:
     version "0.2.0"
@@ -1670,6 +1709,21 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/repeating/-/repeating-1.1.3.tgz#3d4114218877537494f97f77f9785fab810fa4ac"
     dependencies:
       is-finite "^1.0.0"
+  
+  request-promise-core@1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.1.tgz#3eee00b2c5aa83239cfb04c5700da36f81cd08b6"
+    dependencies:
+      lodash "^4.13.1"
+  
+  request-promise@^4.2.1:
+    version "4.2.2"
+    resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.2.tgz#d1ea46d654a6ee4f8ee6a4fea1018c22911904b4"
+    dependencies:
+      bluebird "^3.5.0"
+      request-promise-core "1.1.1"
+      stealthy-require "^1.1.0"
+      tough-cookie ">=2.3.3"
   
   request@^2.81.0:
     version "2.81.0"
@@ -1879,6 +1933,10 @@ Lockfile:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
   
+  stealthy-require@^1.1.0:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+  
   stream-combiner@~0.0.4:
     version "0.0.4"
     resolved "https://registry.yarnpkg.com/stream-combiner/-/stream-combiner-0.0.4.tgz#4d5e433c185261dde623ca3f44c586bcf5c4ad14"
@@ -1978,15 +2036,15 @@ Lockfile:
     dependencies:
       nopt "~1.0.10"
   
-  tough-cookie@~2.3.0:
-    version "2.3.2"
-    resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
+  tough-cookie@>=2.3.3, tough-cookie@~2.3.3:
+    version "2.3.4"
+    resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
     dependencies:
       punycode "^1.4.1"
   
-  tough-cookie@~2.3.3:
-    version "2.3.4"
-    resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
+  tough-cookie@~2.3.0:
+    version "2.3.2"
+    resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
     dependencies:
       punycode "^1.4.1"
   
@@ -2117,10 +2175,11 @@ Lockfile:
       os-homedir "^1.0.0"
 
 Trace: 
-  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add node-spotify-api" instead.
+  Error: Couldn't find package "=" on the "npm" registry.
       at new MessageError (C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at Object.<anonymous> (C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:21987:13)
+      at NpmResolver.<anonymous> (C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:51625:15)
       at Generator.next (<anonymous>)
       at step (C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
       at C:\Users\Ariana\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
       at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:188:7)
